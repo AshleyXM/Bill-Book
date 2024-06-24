@@ -1,8 +1,10 @@
-import { Button, DatePicker, Input, NavBar } from "antd-mobile";
-import Icon from "@/components/Icon";
 import "./index.scss";
-import classNames from "classnames";
+import Icon from "@/components/Icon";
 import { billListData } from "@/constants";
+
+import { Button, DatePicker, Input, NavBar } from "antd-mobile";
+import classNames from "classnames";
+
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -47,7 +49,7 @@ const New = () => {
             </div>
             <div className="kaInput">
               <Input className="input" placeholder="0.00" type="number" />
-              <span className="iconYuan">¥</span>
+              <span className="iconYuan">$</span>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import "./index.scss";
 
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 
 const DailyBill = ({ date, billList }) => {
   const dayResult = useMemo(() => {
@@ -19,12 +19,18 @@ const DailyBill = ({ date, billList }) => {
       total: income + pay,
     };
   }, [billList]);
+
+  const [visible, setVisible] = useState(false);
   return (
     <div className={classNames("dailyBill")}>
       <div className="header">
         <div className="dateIcon">
           <span className="date">{date}</span>
-          <span className={classNames("arrow")}></span>
+          {/* expand代表展开的箭头样式 - 向上的箭头 */}
+          <span
+            className={classNames("arrow", visible && "expand")}
+            onClick={() => setVisible(!visible)}
+          ></span>
         </div>
         <div className="oneLineOverview">
           <div className="pay">
@@ -42,7 +48,7 @@ const DailyBill = ({ date, billList }) => {
         </div>
       </div>
       {/* 单日列表 */}
-      <div className="billList">
+      <div className="billList" style={{ display: visible ? "block" : "none" }}>
         {billList.map((item) => {
           return (
             <div className="bill" key={item.id}>

@@ -4,7 +4,7 @@ const BASE_URL =
 const Icon = ({ type }) => {
   return (
     <img
-      src={`${BASE_URL}${type}.svg`}
+      src={`${BASE_URL + type}.svg`}
       alt="icon"
       style={{
         width: 20,

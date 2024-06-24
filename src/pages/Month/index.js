@@ -8,7 +8,7 @@ const Month = () => {
   // 控制弹框的打开和关闭
   const [dateVisible, setDateVisible] = useState(false);
 
-  const handleDataConfirm = () => {
+  const handleDateConfirm = () => {
     setDateVisible(false);
     // 其他处理逻辑
   };
@@ -49,7 +49,7 @@ const Month = () => {
             precision="month"
             visible={dateVisible}
             onCancel={() => setDateVisible(false)}
-            onConfirm={handleDataConfirm}
+            onConfirm={handleDateConfirm}
             onClose={() => setDateVisible(false)}
             max={new Date()}
           />

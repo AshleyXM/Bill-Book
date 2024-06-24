@@ -13,17 +13,17 @@ import {
 const tabs = [
   {
     key: "/",
-    title: "月度账单",
+    title: "Monthly Statement",
     icon: <BillOutline />,
   },
   {
     key: "/new",
-    title: "记账",
+    title: "New",
     icon: <AddCircleOutline />,
   },
   {
     key: "/year",
-    title: "年度账单",
+    title: "Yearly Statement",
     icon: <CalculatorOutline />,
   },
 ];

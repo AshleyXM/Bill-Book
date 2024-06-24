@@ -43,7 +43,7 @@
       .type {
         font-size: 10px;
         margin-right: 2.5px;
-        color: #e56a77;
+        color: #4f827c;
       }
       .money {
         color: var(--ka-text-color);
@@ -56,7 +56,7 @@
       .type {
         font-size: 10px;
         margin-right: 2.5px;
-        color: #4f827c;
+        color: #e56a77;
       }
       .money {
         color: var(--ka-text-color);
@@ -115,10 +115,10 @@
         font-size: 17px;
 
         &.pay {
-          color: #ff917b;
+          color: #4f827c;
         }
         &.income {
-          color: #4f827c;
+          color: #ff917b;
         }
       }
     }

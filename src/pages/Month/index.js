@@ -74,7 +74,7 @@ const Month = () => {
   return (
     <div className="monthlyBill">
       <NavBar className="nav" backArrow={false}>
-        月度收支
+        Monthly Statement
       </NavBar>
       <div className="content">
         <div className="header">
@@ -90,15 +90,15 @@ const Month = () => {
           <div className="twoLineOverview">
             <div className="item">
               <span className="money">{monthResult.pay.toFixed(2)}</span>
-              <span className="type">支出</span>
+              <span className="type">Cost</span>
             </div>
             <div className="item">
               <span className="money">{monthResult.income.toFixed(2)}</span>
-              <span className="type">收入</span>
+              <span className="type">Income</span>
             </div>
             <div className="item">
               <span className="money">{monthResult.total.toFixed(2)}</span>
-              <span className="type">结余</span>
+              <span className="type">Total</span>
             </div>
           </div>
           {/* 时间选择器 */}

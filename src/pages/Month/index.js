@@ -29,7 +29,7 @@ const Month = () => {
         <div className="header">
           {/* 时间切换区域 */}
           <div className="date" onClick={() => setDateVisible(true)}>
-            <span className="text">{currentDate + ""}</span>
+            <span className="text">{currentDate}</span>
             {/* 根据当前弹框的打开状态控制expand类名的存在与否 */}
             <span
               className={classNames("arrow", dateVisible && "expand")}

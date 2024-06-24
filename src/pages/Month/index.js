@@ -65,11 +65,6 @@ const Month = () => {
       dayjs(item.date).format("YYYY-MM-DD")
     );
     const keys = Object.keys(groupData);
-    console.log(
-      "%c [ keys ] - row 67: ",
-      "background-color: #3756d4; padding: 4px 8px; border-radius: 2px; font-size: 14px; color: #fff; font-weight: 700;",
-      groupData
-    );
     return {
       groupData,
       keys,

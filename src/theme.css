@@ -1,0 +1,9 @@
+/* 覆盖全局主题 */
+/* :root:root {
+  --adm-color-primary: #a062d4;
+} */
+
+/* 只会影响局部的样式 */
+.purple {
+  --adm-color-primary: purple;
+}

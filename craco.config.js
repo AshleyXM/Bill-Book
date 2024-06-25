@@ -1,3 +1,4 @@
+// CommonJS语法（不是ES6语法），因为这个文件在Node.js环境中运行
 const path = require("path");
 
 module.exports = {

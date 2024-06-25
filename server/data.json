@@ -139,6 +139,13 @@
       "money": 2000,
       "date": "2024-06-25T06:42:19.372Z",
       "useFor": "overtimepay"
+    },
+    {
+      "id": "c2f8",
+      "type": "income",
+      "money": 30000,
+      "date": "2024-06-18T07:00:00.000Z",
+      "useFor": "bonus"
     }
   ]
 }

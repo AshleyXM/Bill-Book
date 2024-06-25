@@ -64,7 +64,8 @@ const Month = () => {
     const groupData = _.groupBy(currentMonthList, (item) =>
       dayjs(item.date).format("YYYY-MM-DD")
     );
-    const keys = Object.keys(groupData);
+    const keys = _.orderBy(Object.keys(groupData), [], "desc"); // 按照降序排列当月日期
+
     return {
       groupData,
       keys,

@@ -104,9 +104,11 @@ const Month = () => {
           {/* 时间选择器 */}
           <DatePicker
             className="kaDate"
-            title="记账日期"
+            title="Bill Date"
             precision="month"
             visible={dateVisible}
+            confirmText="Confirm"
+            cancelText="Cancel"
             onCancel={() => setDateVisible(false)}
             onConfirm={handleDateConfirm}
             onClose={() => setDateVisible(false)}

@@ -34,7 +34,7 @@ export const billListData = {
         { type: "clothes", name: "Clothing" },
         { type: "bag", name: "Accessories" },
         { type: "book", name: "Education" },
-        { type: "promote", name: "Improvements" },
+        { type: "promote", name: "Improve- ments" },
         { type: "home", name: "Furniture" },
       ],
     },

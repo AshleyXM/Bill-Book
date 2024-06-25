@@ -104,6 +104,41 @@
       "money": -20,
       "date": "2024-06-25T06:01:29.603Z",
       "useFor": "drinks"
+    },
+    {
+      "id": "84ed",
+      "type": "pay",
+      "money": -20,
+      "date": "2024-06-24",
+      "useFor": "dessert"
+    },
+    {
+      "id": "ed5c",
+      "type": "pay",
+      "money": -30,
+      "date": "2024-06-20",
+      "useFor": "dessert"
+    },
+    {
+      "id": "51cd",
+      "type": "pay",
+      "money": -20,
+      "date": "2024-06-25T06:36:44.045Z",
+      "useFor": "dessert"
+    },
+    {
+      "id": "cd26",
+      "type": "pay",
+      "money": -20,
+      "date": "2024-06-25T06:36:44.045Z",
+      "useFor": "food"
+    },
+    {
+      "id": "477e",
+      "type": "income",
+      "money": 2000,
+      "date": "2024-06-25T06:42:19.372Z",
+      "useFor": "overtimepay"
     }
   ]
 }

@@ -8,10 +8,32 @@ import classNames from "classnames";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
+import { addBillList } from "@/store/modules/billReducer";
+import { useDispatch } from "react-redux";
+
 const New = () => {
   const navigate = useNavigate();
 
   const [billType, setBillType] = useState("pay");
+
+  const [money, setMoney] = useState("");
+
+  // 收集账单类型
+  const [useFor, setUseFor] = useState("");
+
+  const dispatch = useDispatch();
+
+  // 保存账单
+  const saveBill = () => {
+    // 收集表单数据
+    const data = {
+      type: billType,
+      money: billType === "pay" ? -money : +money, // 这里必须加上+和-将字符串类型转换成数值类型
+      date: new Date(),
+      useFor: useFor,
+    };
+    dispatch(addBillList(data));
+  };
   return (
     <div className="keepAccounts">
       <NavBar className="nav" onBack={() => navigate(-1)}>
@@ -48,7 +70,13 @@ const New = () => {
               />
             </div>
             <div className="kaInput">
-              <Input className="input" placeholder="0.00" type="number" />
+              <Input
+                className="input"
+                placeholder="0.00"
+                type="number"
+                value={money}
+                onChange={(value) => setMoney(value)}
+              />
               <span className="iconYuan">$</span>
             </div>
           </div>
@@ -63,7 +91,11 @@ const New = () => {
               <div className="list">
                 {item.list.map((item) => {
                   return (
-                    <div className={classNames("item", "")} key={item.type}>
+                    <div
+                      className={classNames("item", "")}
+                      key={item.type}
+                      onClick={() => setUseFor(item.type)}
+                    >
                       <div className="icon">
                         <Icon type={item.type} />
                       </div>
@@ -78,7 +110,9 @@ const New = () => {
       </div>
 
       <div className="btns">
-        <Button className="btn save">Save</Button>
+        <Button className="btn save" onClick={saveBill}>
+          Save
+        </Button>
       </div>
     </div>
   );
